@@ -1,0 +1,60 @@
+{
+  "lastUpdate": "2025-11-13T18:45:00-03:00",
+  "lastUpdateText": "13-11-2025 18:45 (hora de Santiago)",
+  "lines": [
+    {
+      "id": "1",
+      "name": "Línea 1",
+      "status": "activa",
+      "label": "Activa",
+      "badgeType": "active",
+      "shortText": "Operación normal. Frecuencia reforzada en hora punta.",
+      "details": "Línea 1: Operación normal en toda la línea. Frecuencia reforzada en hora punta entre Tobalaba y Universidad de Chile."
+    },
+    {
+      "id": "2",
+      "name": "Línea 2",
+      "status": "detenida-parcial",
+      "label": "Detenida parcial",
+      "badgeType": "warning",
+      "shortText": "Incidente operativo entre Lo Ovalle y La Cisterna.",
+      "details": "Línea 2: Servicio suspendido entre Lo Ovalle y La Cisterna por falla eléctrica. Trenes operan entre Vespucio Norte – Lo Ovalle y La Cisterna – Hospital El Pino."
+    },
+    {
+      "id": "3",
+      "name": "Línea 3",
+      "status": "activa",
+      "label": "Activa",
+      "badgeType": "active",
+      "shortText": "Operación normal. Alta afluencia en U. de Chile y Plaza de Armas.",
+      "details": "Línea 3: Operación normal. Mayor afluencia en U. de Chile, Plaza de Armas y Ñuñoa, lo que puede generar pequeñas demoras en hora punta."
+    },
+    {
+      "id": "4",
+      "name": "Línea 4",
+      "status": "activa",
+      "label": "Activa",
+      "badgeType": "active",
+      "shortText": "Operación normal en toda la línea.",
+      "details": "Línea 4: Operación normal en toda la línea. Considerar tiempos adicionales en combinación con L4A y L3."
+    },
+    {
+      "id": "5",
+      "name": "Línea 5",
+      "status": "detenida",
+      "label": "Detenida",
+      "badgeType": "stopped",
+      "shortText": "Servicio suspendido entre Ñuble y Vicente Valdés.",
+      "details": "Línea 5: Servicio suspendido entre Ñuble y Vicente Valdés por falla en el sistema de energía. Estaciones afectadas: Ñuble, Rodrigo de Araya, Carlos Valdovinos, Camino Agrícola, San Joaquín, Pedrero, Mirador, Bellavista de La Florida, Vicente Valdés."
+    },
+    {
+      "id": "6",
+      "name": "Línea 6",
+      "status": "activa",
+      "label": "Activa",
+      "badgeType": "active",
+      "shortText": "Operación normal. Tren expreso habilitado en horario punta.",
+      "details": "Línea 6: Operación normal. Tren expreso habilitado en horarios punta AM y PM entre Cerrillos y Ñuble."
+    }
+  ]
+}

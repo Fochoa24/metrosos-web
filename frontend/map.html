@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>metroSOS – Mapa del Metro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="ms-header">
+    <div class="ms-header__brand">
+      <img src="assets/img/metrosos-logo.svg" alt="Logo metroSOS" class="logo">
+      <div class="ms-header__text">
+        <span class="ms-header__title">metroSOS</span>
+        <span class="ms-header__subtitle">Estado en tiempo real del Metro de Santiago</span>
+      </div>
+    </div>
+
+    <nav class="ms-nav">
+      <a href="index.html" class="ms-nav__link">Líneas</a>
+      <a href="report.html" class="ms-nav__link">Reportar incidente</a>
+      <a href="map.html" class="ms-nav__link ms-nav__link--active">Mapa</a>
+      <a href="account.html" class="ms-nav__link">Mi cuenta</a>
+    </nav>
+  </header>
+
+  <main class="ms-main">
+    <section class="ms-section">
+      <h1 class="ms-section__title">Mapa completo del Metro de Santiago</h1>
+      <p class="ms-section__description">
+        Visualiza la red completa del Metro. En futuras versiones podrás ver el estado de cada estación directamente en el mapa.
+      </p>
+
+      <article class="line-card">
+        <header class="line-card__header">
+          <div>
+            <h2 class="line-card__title">Red actual</h2>
+            <p class="line-card__subtitle">Líneas 1 a 6</p>
+          </div>
+        </header>
+        <p class="line-card__status-text">
+          Mapa referencial de la red de Metro de Santiago.
+        </p>
+        <div style="margin-top: 0.75rem;">
+          <!-- Reemplaza esta imagen por tu mapa real -->
+          <img src="assets/img/mapa-metro.png" alt="Mapa del Metro de Santiago" style="width: 100%; border-radius: 0.75rem;">
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

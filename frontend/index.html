@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>metroSOS – Estado de Líneas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="ms-header">
+    <div class="ms-header__brand">
+      <img src="assets/img/metrosos-logo.svg" alt="Logo metroSOS" class="logo">
+      <div class="ms-header__text">
+        <span class="ms-header__title">metroSOS</span>
+        <span class="ms-header__subtitle">Estado en tiempo real del Metro de Santiago</span>
+      </div>
+    </div>
+
+    <nav class="ms-nav">
+      <a href="index.html" class="ms-nav__link ms-nav__link--active">Líneas</a>
+      <a href="report.html" class="ms-nav__link">Reportar incidente</a>
+      <a href="map.html" class="ms-nav__link">Mapa</a>
+      <a href="account.html" class="ms-nav__link">Mi cuenta</a>
+    </nav>
+  </header>
+
+  <main class="ms-main">
+    <section class="ms-section">
+      <h1 class="ms-section__title">Estado de las líneas</h1>
+      <p class="ms-section__description">
+        Revisa en tiempo casi real el estado de la red. Si ves algún incidente, repórtalo en la sección “Reportar incidente”.
+      </p>
+
+      <!-- Última actualización desde el JSON -->
+      <div class="ms-last-update">
+        <span id="lastUpdate">Última actualización: --</span>
+      </div>
+
+      <div class="lines-grid">
+        <!-- L1 -->
+        <article class="line-card" data-line="1">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Línea 1</h2>
+              <p class="line-card__subtitle">San Pablo – Los Dominicos</p>
+            </div>
+            <span class="badge badge--active" data-status-badge>Activa</span>
+          </header>
+          <p class="line-card__status-text" data-status-text>
+            Operación normal. Frecuencia reforzada en hora punta.
+          </p>
+          <button class="btn btn--outline" data-line="1">Detalles</button>
+        </article>
+
+        <!-- L2 -->
+        <article class="line-card" data-line="2">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Línea 2</h2>
+              <p class="line-card__subtitle">Vespucio Norte – Hospital El Pino</p>
+            </div>
+            <span class="badge badge--warning" data-status-badge>Detenida parcial</span>
+          </header>
+          <p class="line-card__status-text" data-status-text>
+            Incidente operativo entre <strong>Lo Ovalle</strong> y <strong>La Cisterna</strong>.
+          </p>
+          <button class="btn btn--primary" data-line="2">Detalles</button>
+        </article>
+
+        <!-- L3 -->
+        <article class="line-card" data-line="3">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Línea 3</h2>
+              <p class="line-card__subtitle">Los Libertadores – Fernando Castillo Velasco</p>
+            </div>
+            <span class="badge badge--active" data-status-badge>Activa</span>
+          </header>
+          <p class="line-card__status-text" data-status-text>
+            Operación normal. Leves demoras por alta afluencia en U. de Chile y Plaza de Armas.
+          </p>
+          <button class="btn btn--outline" data-line="3">Detalles</button>
+        </article>
+
+        <!-- L4 -->
+        <article class="line-card" data-line="4">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Línea 4</h2>
+              <p class="line-card__subtitle">Tobalaba – Plaza de Puente Alto</p>
+            </div>
+            <span class="badge badge--active" data-status-badge>Activa</span>
+          </header>
+          <p class="line-card__status-text" data-status-text>
+            Operación normal en toda la línea.
+          </p>
+          <button class="btn btn--outline" data-line="4">Detalles</button>
+        </article>
+
+        <!-- L5 -->
+        <article class="line-card" data-line="5">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Línea 5</h2>
+              <p class="line-card__subtitle">Plaza de Maipú – Vicente Valdés</p>
+            </div>
+            <span class="badge badge--warning" data-status-badge>Detenida</span>
+          </header>
+          <p class="line-card__status-text" data-status-text>
+            Servicio suspendido entre <strong>Ñuble</strong> y <strong>Vicente Valdés</strong>.
+          </p>
+          <button class="btn btn--primary" data-line="5">Detalles</button>
+        </article>
+
+        <!-- L6 -->
+        <article class="line-card" data-line="6">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Línea 6</h2>
+              <p class="line-card__subtitle">Cerrillos – Los Leones</p>
+            </div>
+            <span class="badge badge--active" data-status-badge>Activa</span>
+          </header>
+          <p class="line-card__status-text" data-status-text>
+            Operación normal. Tren expreso habilitado en horario punta.
+          </p>
+          <button class="btn btn--outline" data-line="6">Detalles</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Detalles -->
+  <div class="modal" id="detailsModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close-modal>&times;</button>
+      <h2 class="modal__title">Detalles de la línea</h2>
+      <p class="modal__body" id="modalBody">
+        Aquí se mostrarán los detalles del incidente y las estaciones afectadas.
+      </p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

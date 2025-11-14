@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>metroSOS – Reportar incidente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="ms-header">
+    <div class="ms-header__brand">
+      <img src="assets/img/metrosos-logo.svg" alt="Logo metroSOS" class="logo">
+      <div class="ms-header__text">
+        <span class="ms-header__title">metroSOS</span>
+        <span class="ms-header__subtitle">Estado en tiempo real del Metro de Santiago</span>
+      </div>
+    </div>
+
+    <nav class="ms-nav">
+      <a href="index.html" class="ms-nav__link">Líneas</a>
+      <a href="report.html" class="ms-nav__link ms-nav__link--active">Reportar incidente</a>
+      <a href="map.html" class="ms-nav__link">Mapa</a>
+      <a href="account.html" class="ms-nav__link">Mi cuenta</a>
+    </nav>
+  </header>
+
+  <main class="ms-main">
+    <section class="ms-section">
+      <h1 class="ms-section__title">Reportar incidente</h1>
+      <p class="ms-section__description">
+        Ayúdanos a mejorar la información en tiempo real. Describe qué ocurre en la estación o tren donde te encuentras.
+      </p>
+
+      <!-- FORMULARIO manejado por JS (fetch) -->
+      <form id="reportForm" class="ms-form" novalidate>
+        <div class="ms-form__group">
+          <label for="linea">Línea</label>
+          <select id="linea" name="linea" class="ms-select" required>
+            <option value="">Selecciona una línea</option>
+            <option value="1">Línea 1</option>
+            <option value="2">Línea 2</option>
+            <option value="3">Línea 3</option>
+            <option value="4">Línea 4</option>
+            <option value="5">Línea 5</option>
+            <option value="6">Línea 6</option>
+          </select>
+        </div>
+
+        <div class="ms-form__group">
+          <label for="tipo">Tipo de incidente</label>
+          <select id="tipo" name="tipo" class="ms-select" required>
+            <option value="">Selecciona una opción</option>
+            <option value="atraso">Tren detenido / grandes atrasos</option>
+            <option value="afluencia">Aglomeración inusual</option>
+            <option value="tecnico">Falla técnica (puertas, luces, energía)</option>
+            <option value="seguridad">Seguridad (riñas, robos, persona en vía)</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="ms-form__group">
+          <label for="estacion">Estación (si corresponde)</label>
+          <input id="estacion" name="estacion" class="ms-input" type="text" placeholder="Ej. Baquedano, Ñuble, Los Leones">
+        </div>
+
+        <div class="ms-form__group">
+          <label for="descripcion">Descripción del incidente</label>
+          <textarea id="descripcion" name="descripcion" class="ms-textarea" rows="4"
+            placeholder="Describe brevemente qué está pasando, hace cuánto tiempo, y si hay estaciones afectadas."
+            required></textarea>
+        </div>
+
+        <div class="ms-form__group">
+          <label for="email">Correo (opcional, para contacto)</label>
+          <input id="email" name="email" class="ms-input" type="email" placeholder="tu@correo.com">
+        </div>
+
+        <button class="btn btn--primary" type="submit">Enviar reporte</button>
+      </form>
+
+      <!-- LISTA DE REPORTES -->
+      <section class="ms-subsection">
+        <h2 class="ms-subsection__title">Reportes almacenados</h2>
+        <p class="ms-subsection__description">
+          Estos reportes se guardan en el backend de metroSOS y se muestran en tiempo real desde la API.
+        </p>
+        <div id="reportList" class="report-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/report.js"></script>
+</body>
+</html>

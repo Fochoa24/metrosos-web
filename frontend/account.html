@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>metroSOS – Mi cuenta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="ms-header">
+    <div class="ms-header__brand">
+      <img src="assets/img/metrosos-logo.svg" alt="Logo metroSOS" class="logo">
+      <div class="ms-header__text">
+        <span class="ms-header__title">metroSOS</span>
+        <span class="ms-header__subtitle">Estado en tiempo real del Metro de Santiago</span>
+      </div>
+    </div>
+
+    <nav class="ms-nav">
+      <a href="index.html" class="ms-nav__link">Líneas</a>
+      <a href="report.html" class="ms-nav__link">Reportar incidente</a>
+      <a href="map.html" class="ms-nav__link">Mapa</a>
+      <a href="account.html" class="ms-nav__link ms-nav__link--active">Mi cuenta</a>
+    </nav>
+  </header>
+
+  <main class="ms-main">
+    <section class="ms-section">
+      <h1 class="ms-section__title">Accede a tu cuenta</h1>
+      <p class="ms-section__description">
+        Regístrate para guardar tus reportes y, en futuras versiones, personalizar alertas y preferencias.
+      </p>
+
+      <div id="sessionInfo" class="report-list" style="margin-bottom: 1rem;"></div>
+
+      <div class="lines-grid">
+        <!-- Login -->
+        <article class="line-card">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Iniciar sesión</h2>
+              <p class="line-card__subtitle">Usuarios registrados</p>
+            </div>
+          </header>
+
+          <form id="loginForm" class="ms-form" novalidate>
+            <div class="ms-form__group">
+              <label for="login-email">Correo electrónico</label>
+              <input id="login-email" name="email" class="ms-input" type="email" required>
+            </div>
+
+            <div class="ms-form__group">
+              <label for="login-password">Contraseña</label>
+              <input id="login-password" name="password" class="ms-input" type="password" required>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Entrar</button>
+          </form>
+        </article>
+
+        <!-- Register -->
+        <article class="line-card">
+          <header class="line-card__header">
+            <div>
+              <h2 class="line-card__title">Crear cuenta</h2>
+              <p class="line-card__subtitle">Nuevo usuario</p>
+            </div>
+          </header>
+
+          <form id="registerForm" class="ms-form" novalidate>
+            <div class="ms-form__group">
+              <label for="reg-name">Nombre</label>
+              <input id="reg-name" name="name" class="ms-input" type="text" required>
+            </div>
+
+            <div class="ms-form__group">
+              <label for="reg-email">Correo electrónico</label>
+              <input id="reg-email" name="email" class="ms-input" type="email" required>
+            </div>
+
+            <div class="ms-form__group">
+              <label for="reg-password">Contraseña</label>
+              <input id="reg-password" name="password" class="ms-input" type="password" required>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Registrarme</button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/account.js"></script>
+</body>
+</html>
